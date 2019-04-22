@@ -113,5 +113,6 @@ namespace RS3herbCalc
             profitLossFourDoseOutput.Value = CalculatorLogic.ProfitLossSellingFourDose(resourceCostOutput.Value, sellingAllFourDoseOutput.Value);
         }
 
+ 
     }
 }
