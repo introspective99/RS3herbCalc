@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.herbCostLabel = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.ingredientCost = new System.Windows.Forms.Label();
             this.vialOfWaterCost = new System.Windows.Forms.Label();
             this.grimyCleanCheck = new System.Windows.Forms.CheckBox();
@@ -38,8 +37,6 @@
             this.factoryOutfitCheck = new System.Windows.Forms.CheckBox();
             this.botanistAmuletCheck = new System.Windows.Forms.CheckBox();
             this.wastelessHerbloreCheck = new System.Windows.Forms.CheckBox();
-            this.costPer3DoseOutput = new System.Windows.Forms.TextBox();
-            this.costPer1DoseOutput = new System.Windows.Forms.TextBox();
             this.potionDoseLabel = new System.Windows.Forms.Label();
             this.costPer3DoseLabel = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -48,9 +45,15 @@
             this.herbCostInput = new System.Windows.Forms.NumericUpDown();
             this.costPerUnfOutput = new System.Windows.Forms.NumericUpDown();
             this.vialOfWaterCostInput = new System.Windows.Forms.NumericUpDown();
+            this.ingredientsCostInput = new System.Windows.Forms.NumericUpDown();
+            this.costPer1DoseOutput = new System.Windows.Forms.NumericUpDown();
+            this.costPer3DoseOutput = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.herbCostInput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.costPerUnfOutput)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vialOfWaterCostInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsCostInput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costPer1DoseOutput)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costPer3DoseOutput)).BeginInit();
             this.SuspendLayout();
             // 
             // herbCostLabel
@@ -61,13 +64,6 @@
             this.herbCostLabel.Size = new System.Drawing.Size(54, 13);
             this.herbCostLabel.TabIndex = 0;
             this.herbCostLabel.Text = "Herb Cost";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(15, 104);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 20);
-            this.textBox5.TabIndex = 6;
             // 
             // ingredientCost
             // 
@@ -148,20 +144,6 @@
             this.wastelessHerbloreCheck.Text = "Are you using the Wasteless Herblore scroll?";
             this.wastelessHerbloreCheck.UseVisualStyleBackColor = true;
             // 
-            // costPer3DoseOutput
-            // 
-            this.costPer3DoseOutput.Location = new System.Drawing.Point(206, 104);
-            this.costPer3DoseOutput.Name = "costPer3DoseOutput";
-            this.costPer3DoseOutput.Size = new System.Drawing.Size(139, 20);
-            this.costPer3DoseOutput.TabIndex = 27;
-            // 
-            // costPer1DoseOutput
-            // 
-            this.costPer1DoseOutput.Location = new System.Drawing.Point(206, 64);
-            this.costPer1DoseOutput.Name = "costPer1DoseOutput";
-            this.costPer1DoseOutput.Size = new System.Drawing.Size(139, 20);
-            this.costPer1DoseOutput.TabIndex = 28;
-            // 
             // potionDoseLabel
             // 
             this.potionDoseLabel.AutoSize = true;
@@ -241,11 +223,50 @@
             this.vialOfWaterCostInput.Size = new System.Drawing.Size(120, 20);
             this.vialOfWaterCostInput.TabIndex = 38;
             // 
-            // Form1
+            // ingredientsCostInput
+            // 
+            this.ingredientsCostInput.Location = new System.Drawing.Point(15, 104);
+            this.ingredientsCostInput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.ingredientsCostInput.Name = "ingredientsCostInput";
+            this.ingredientsCostInput.Size = new System.Drawing.Size(120, 20);
+            this.ingredientsCostInput.TabIndex = 40;
+            // 
+            // costPer1DoseOutput
+            // 
+            this.costPer1DoseOutput.Location = new System.Drawing.Point(206, 65);
+            this.costPer1DoseOutput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.costPer1DoseOutput.Name = "costPer1DoseOutput";
+            this.costPer1DoseOutput.Size = new System.Drawing.Size(120, 20);
+            this.costPer1DoseOutput.TabIndex = 41;
+            // 
+            // costPer3DoseOutput
+            // 
+            this.costPer3DoseOutput.Location = new System.Drawing.Point(206, 104);
+            this.costPer3DoseOutput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
+            this.costPer3DoseOutput.Name = "costPer3DoseOutput";
+            this.costPer3DoseOutput.Size = new System.Drawing.Size(120, 20);
+            this.costPer3DoseOutput.TabIndex = 42;
+            // 
+            // PotionCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 423);
+            this.Controls.Add(this.costPer3DoseOutput);
+            this.Controls.Add(this.costPer1DoseOutput);
+            this.Controls.Add(this.ingredientsCostInput);
             this.Controls.Add(this.vialOfWaterCostInput);
             this.Controls.Add(this.costPerUnfOutput);
             this.Controls.Add(this.herbCostInput);
@@ -254,8 +275,6 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.costPer3DoseLabel);
             this.Controls.Add(this.potionDoseLabel);
-            this.Controls.Add(this.costPer1DoseOutput);
-            this.Controls.Add(this.costPer3DoseOutput);
             this.Controls.Add(this.wastelessHerbloreCheck);
             this.Controls.Add(this.botanistAmuletCheck);
             this.Controls.Add(this.factoryOutfitCheck);
@@ -264,13 +283,15 @@
             this.Controls.Add(this.grimyCleanCheck);
             this.Controls.Add(this.vialOfWaterCost);
             this.Controls.Add(this.ingredientCost);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.herbCostLabel);
-            this.Name = "Form1";
+            this.Name = "PotionCalculator";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.herbCostInput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.costPerUnfOutput)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vialOfWaterCostInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ingredientsCostInput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costPer1DoseOutput)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.costPer3DoseOutput)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,7 +300,6 @@
         #endregion
 
         private System.Windows.Forms.Label herbCostLabel;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label ingredientCost;
         private System.Windows.Forms.Label vialOfWaterCost;
         private System.Windows.Forms.CheckBox grimyCleanCheck;
@@ -288,8 +308,6 @@
         private System.Windows.Forms.CheckBox factoryOutfitCheck;
         private System.Windows.Forms.CheckBox botanistAmuletCheck;
         private System.Windows.Forms.CheckBox wastelessHerbloreCheck;
-        private System.Windows.Forms.TextBox costPer3DoseOutput;
-        private System.Windows.Forms.TextBox costPer1DoseOutput;
         private System.Windows.Forms.Label potionDoseLabel;
         private System.Windows.Forms.Label costPer3DoseLabel;
         private System.Windows.Forms.TextBox textBox3;
@@ -298,6 +316,9 @@
         private System.Windows.Forms.NumericUpDown herbCostInput;
         private System.Windows.Forms.NumericUpDown costPerUnfOutput;
         private System.Windows.Forms.NumericUpDown vialOfWaterCostInput;
+        private System.Windows.Forms.NumericUpDown ingredientsCostInput;
+        private System.Windows.Forms.NumericUpDown costPer1DoseOutput;
+        private System.Windows.Forms.NumericUpDown costPer3DoseOutput;
     }
 }
 
