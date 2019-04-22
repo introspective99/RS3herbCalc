@@ -9,12 +9,13 @@ namespace RS3herbCalc
     public class IngredientsClass
     {
         public string herb { get; set; }
-        public int herbCost { get; set; }
+        public decimal herbCost { get; set; }
         public string ingredient { get; set; }
-        public int ingredientCost { get; set; }
+        public decimal ingredientCost { get; set; }
         public bool herbClean { get; set; }
-        public int vialOfWaterCost { get; set; }
-        public int herbStock { get; set; }
+        public decimal vialOfWaterCost { get; set; }
+        public decimal herbStock { get; set; }
+        public decimal unfPotionStock { get; set; }
     }
 }
 
