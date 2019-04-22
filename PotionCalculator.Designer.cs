@@ -1,6 +1,6 @@
 ﻿namespace RS3herbCalc
 {
-    partial class Form1
+    partial class PotionCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -45,7 +45,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.potion3GECostLabel = new System.Windows.Forms.Label();
             this.costPerUnfLabel = new System.Windows.Forms.Label();
-            this.UnfPotCalcButton = new System.Windows.Forms.Button();
             this.herbCostInput = new System.Windows.Forms.NumericUpDown();
             this.costPerUnfOutput = new System.Windows.Forms.NumericUpDown();
             this.vialOfWaterCostInput = new System.Windows.Forms.NumericUpDown();
@@ -206,19 +205,14 @@
             this.costPerUnfLabel.TabIndex = 34;
             this.costPerUnfLabel.Text = "Cost Per Unfinished Potion";
             // 
-            // UnfPotCalcButton
-            // 
-            this.UnfPotCalcButton.Location = new System.Drawing.Point(218, 143);
-            this.UnfPotCalcButton.Name = "UnfPotCalcButton";
-            this.UnfPotCalcButton.Size = new System.Drawing.Size(102, 25);
-            this.UnfPotCalcButton.TabIndex = 35;
-            this.UnfPotCalcButton.Text = "Calculate Unf Pot Cost";
-            this.UnfPotCalcButton.UseVisualStyleBackColor = true;
-            this.UnfPotCalcButton.Click += new System.EventHandler(this.UnfPotCalcButton_Click);
-            // 
             // herbCostInput
             // 
             this.herbCostInput.Location = new System.Drawing.Point(15, 26);
+            this.herbCostInput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.herbCostInput.Name = "herbCostInput";
             this.herbCostInput.Size = new System.Drawing.Size(120, 20);
             this.herbCostInput.TabIndex = 36;
@@ -226,6 +220,11 @@
             // costPerUnfOutput
             // 
             this.costPerUnfOutput.Location = new System.Drawing.Point(206, 26);
+            this.costPerUnfOutput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.costPerUnfOutput.Name = "costPerUnfOutput";
             this.costPerUnfOutput.Size = new System.Drawing.Size(120, 20);
             this.costPerUnfOutput.TabIndex = 37;
@@ -233,6 +232,11 @@
             // vialOfWaterCostInput
             // 
             this.vialOfWaterCostInput.Location = new System.Drawing.Point(15, 65);
+            this.vialOfWaterCostInput.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.vialOfWaterCostInput.Name = "vialOfWaterCostInput";
             this.vialOfWaterCostInput.Size = new System.Drawing.Size(120, 20);
             this.vialOfWaterCostInput.TabIndex = 38;
@@ -245,7 +249,6 @@
             this.Controls.Add(this.vialOfWaterCostInput);
             this.Controls.Add(this.costPerUnfOutput);
             this.Controls.Add(this.herbCostInput);
-            this.Controls.Add(this.UnfPotCalcButton);
             this.Controls.Add(this.costPerUnfLabel);
             this.Controls.Add(this.potion3GECostLabel);
             this.Controls.Add(this.textBox3);
@@ -292,7 +295,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label potion3GECostLabel;
         private System.Windows.Forms.Label costPerUnfLabel;
-        private System.Windows.Forms.Button UnfPotCalcButton;
         private System.Windows.Forms.NumericUpDown herbCostInput;
         private System.Windows.Forms.NumericUpDown costPerUnfOutput;
         private System.Windows.Forms.NumericUpDown vialOfWaterCostInput;
