@@ -46,18 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PotionCalculator.cs">
+    <Compile Include="CalculatorLogic.cs" />
+    <Compile Include="CalcForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PotionCalculator.Designer.cs">
-      <DependentUpon>PotionCalculator.cs</DependentUpon>
+    <Compile Include="CalcForm.Designer.cs">
+      <DependentUpon>CalcForm.cs</DependentUpon>
     </Compile>
     <Compile Include="IngredientsClass.cs" />
     <Compile Include="PotionClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="PotionCalculator.resx">
-      <DependentUpon>PotionCalculator.cs</DependentUpon>
+    <EmbeddedResource Include="CalcForm.resx">
+      <DependentUpon>CalcForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

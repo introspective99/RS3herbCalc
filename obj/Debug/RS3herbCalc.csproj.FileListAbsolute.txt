@@ -7,4 +7,4 @@ C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.csproj
 C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.csproj.CoreCompileInputs.cache
 C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.exe
 C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.pdb
-C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.PotionCalculator.resources
+C:\Users\clair\source\repos\RS3herbCalc\RS3herbCalc\obj\Debug\RS3herbCalc.CalcForm.resources

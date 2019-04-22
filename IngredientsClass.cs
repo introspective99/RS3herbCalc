@@ -14,6 +14,7 @@ namespace RS3herbCalc
         public int ingredientCost { get; set; }
         public bool herbClean { get; set; }
         public int vialOfWaterCost { get; set; }
+        public int herbStock { get; set; }
     }
 }
 
