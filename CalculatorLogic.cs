@@ -15,19 +15,18 @@ namespace RS3herbCalc
             IngredientsClass unfinishedPotionHerb = new IngredientsClass();
             unfinishedPotionHerb.herbCost = herbCostInput;
             unfinishedPotionHerb.vialOfWaterCost = vialOfWaterCostInput;
-            unfinishedPotion.unfPotionCost = unfinishedPotionHerb.herbCost + unfinishedPotionHerb.vialOfWaterCost;
-            return unfinishedPotion.unfPotionCost;
+            return unfinishedPotion.unfPotionCost = unfinishedPotionHerb.herbCost + unfinishedPotionHerb.vialOfWaterCost;
         }
 
 
         static public decimal FinishedThreeDoseCalc(decimal ingredientsCostInput, decimal costPerUnfOutput)
             //takes the info from PotionCalculator form to work out the cost of 1 potion.
         {
-            IngredientsClass extraIngredient = new IngredientsClass();
-            PotionClass threeDosePotionCost = new PotionClass();
-            extraIngredient.ingredientCost = ingredientsCostInput;
-            threeDosePotionCost.potion3Cost = threeDosePotionCost.unfPotionCost + extraIngredient.ingredientCost;
-            return threeDosePotionCost.potion3Cost;
+            IngredientsClass extraIngredientObject = new IngredientsClass();
+            PotionClass unfPotionObject = new PotionClass();
+            extraIngredientObject.ingredientCost = ingredientsCostInput;
+            unfPotionObject.unfPotionCost = costPerUnfOutput;
+            return unfPotionObject.potion3Cost = ingredientsCostInput + costPerUnfOutput;
         }
 
 
